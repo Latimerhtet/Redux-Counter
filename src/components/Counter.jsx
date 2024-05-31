@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { counterAcions } from "../store";
+import { counterAcions } from "../store/countReducer";
 const Counter = () => {
   const dispatch = useDispatch();
-  const count = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.isShow);
+  const count = useSelector((state) => state.counter.counter);
+  const show = useSelector((state) => state.counter.isShow);
   const [amount, setAmount] = useState(0);
   const increaseCount = () => {
     dispatch(counterAcions.increment());
@@ -27,30 +27,32 @@ const Counter = () => {
     dispatch(counterAcions.toggle());
   };
   return (
-    <div className="main">
-      <h1>Counter</h1>
-      {show && <p className="value">{count}</p>}
-      <div className="buttons">
-        <button onClick={increaseCount}>Increase</button>
-        <button onClick={decreaseCount}>Decrease</button>
-      </div>
-      <div>
-        <label htmlFor="">Enter the amount</label>
-        <input
-          type="text"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <button className="amountBtn" onClick={increseByAmount}>
-          +
+    <div className="container">
+      <div className="main">
+        <h1>Counter</h1>
+        {show && <p className="value">{count}</p>}
+        <div className="buttons">
+          <button onClick={increaseCount}>Increase</button>
+          <button onClick={decreaseCount}>Decrease</button>
+        </div>
+        <div>
+          <label htmlFor="">Enter the amount</label>
+          <input
+            type="text"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+          <button className="amountBtn" onClick={increseByAmount}>
+            +
+          </button>
+        </div>
+        <button className="amountBtn" onClick={clearAmount}>
+          Clear count
+        </button>
+        <button className="amountBtn" onClick={toggle}>
+          Toggle
         </button>
       </div>
-      <button className="amountBtn" onClick={clearAmount}>
-        Clear count
-      </button>
-      <button className="amountBtn" onClick={toggle}>
-        Toggle
-      </button>
     </div>
   );
 };
