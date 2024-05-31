@@ -1,4 +1,4 @@
-# Redux practse
+# Redux practise
 
 In this repo, I learned about how redux works, why we should use redux rather than context and using redux toolkit to code better. 
 I just covered the basic concept of redux toolkit.
