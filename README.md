@@ -1,8 +1,7 @@
-# React + Vite
+# Redux practse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this repo, I learned about how redux works, why we should use redux rather than context and using redux toolkit to code better. 
+I just covered the basic concept of redux toolkit.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In the next repo or in this repo later, I will explroe more about advanced redux and redux toolkit!
+Happy coding!!!
